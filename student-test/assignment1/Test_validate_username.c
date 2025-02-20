@@ -12,10 +12,6 @@
 *   3) Use unity assertion TEST_ASSERT_EQUAL_STRING_MESSAGE to verify the two strings are equal.  See
 *       the [unity assertion reference](https://github.com/ThrowTheSwitch/Unity/blob/master/docs/UnityAssertionsReference.md)
 */
-void setUp(void) {
-}
-void tearDown(void) {
-}
 
 void test_validate_my_username()
 {
@@ -32,11 +28,6 @@ void test_validate_my_username()
         file_username,
         "Usernames do not match!"
     );
-    free(file_username);
-}
-
-int main() {
-    UNITY_BEGIN();
-    RUN_TEST(test_validate_my_username);
-    return UNITY_END();
+ 
+   free(file_username);
 }
